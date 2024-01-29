@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paleta de Cores - Monitoramento de Colheita</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #495057;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .color-palette {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            width: 70%;
+        }
+
+        .color-sample {
+            width: 120px;
+            height: 120px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .color-sample:hover {
+            background-color: #dee2e6;
+        }
+
+        .color-sample-name {
+            margin-bottom: 140px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        #themePrimary {
+            background-color: #6a9a8e;
+        }
+
+        #themeLighterAlt {
+            background-color: #f0f6f5;
+        }
+
+        #themeLighter {
+            background-color: #c1dad6;
+        }
+
+        #themeTertiary {
+            background-color: #8ea8a2;
+        }
+
+        #themeSecondary {
+            background-color: #50746e;
+        }
+
+        #themeDarkAlt {
+            background-color: #425d58;
+        }
+
+        #themeDark {
+            background-color: #334d49;
+        }
+
+        #themeDarker {
+            background-color: #253c38;
+        }
+
+        #neutralLigtherAlt {
+            background-color: #fafafa;
+        }
+
+        #neutralLighter {
+            background-color: #f4f4f4;
+        }
+
+        #neutralLight {
+            background-color: #e8e8e8;
+        }
+
+        #neutralQuaternaryAlt {
+            background-color: #d2d2d2;
+        }
+
+        #neutralQuaternary {
+            background-color: #b6b6b6;
+        }
+
+        #NeutralSecundary {
+            background-color: #999999;
+        }
+
+        #neutralPrimaryAlt {
+            background-color: #7f7f7f;
+        }
+
+        #neutralPrimary {
+            background-color: #666666;
+        }
+
+        #neutralDark {
+            background-color: #4d4d4d;
+        }
+
+        #black {
+            background-color: #333333;
+        }
+
+        #white {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="color-palette">
+        <div id="themePrimary" class="color-sample" onclick="copyToClipboard('themePrimary')">
+            <div class="color-sample-name">themePrimary</div>
+        </div>
+        <div id="themeLighterAlt" class="color-sample" onclick="copyToClipboard('themeLighterAlt')">
+            <div class="color-sample-name">themeLighterAlt</div>
+        </div>
+        <div id="themeLighter" class="color-sample" onclick="copyToClipboard('themeLighter')">
+            <div class="color-sample-name">themeLighter</div>
+        </div>
+        <div id="themeTertiary" class="color-sample" onclick="copyToClipboard('themeTertiary')">
+            <div class="color-sample-name">themeTertiary</div>
+        </div>
+        <div id="themeSecondary" class="color-sample" onclick="copyToClipboard('themeSecondary')">
+            <div class="color-sample-name">themeSecondary</div>
+        </div>
+        <div id="themeDarkAlt" class="color-sample" onclick="copyToClipboard('themeDarkAlt')">
+            <div class="color-sample-name">themeDarkAlt</div>
+        </div>
+        <div id="themeDark" class="color-sample" onclick="copyToClipboard('themeDark')">
+            <div class="color-sample-name">themeDark</div>
+        </div>
+        <div id="themeDarker" class="color-sample" onclick="copyToClipboard('themeDarker')">
+            <div class="color-sample-name">themeDarker</div>
+        </div>
+        <div id="neutralLigtherAlt" class="color-sample" onclick="copyToClipboard('neutralLigtherAlt')">
+            <div class="color-sample-name">neutralLigtherAlt</div>
+        </div>
+        <div id="neutralLighter" class="color-sample" onclick="copyToClipboard('neutralLighter')">
+            <div class="color-sample-name">neutralLighter</div>
+        </div>
+        <div id="neutralLight" class="color-sample" onclick="copyToClipboard('neutralLight')">
+            <div class="color-sample-name">neutralLight</div>
+        </div>
+        <div id="neutralQuaternaryAlt" class="color-sample" onclick="copyToClipboard('neutralQuaternaryAlt')">
+            <div class="color-sample-name">neutralQuaternaryAlt</div>
+        </div>
+        <div id="neutralQuaternary" class="color-sample" onclick="copyToClipboard('neutralQuaternary')">
+            <div class="color-sample-name">neutralQuaternary</div>
+        </div>
+        <div id="NeutralSecundary" class="color-sample" onclick="copyToClipboard('NeutralSecundary')">
+            <div class="color-sample-name">NeutralSecundary</div>
+        </div>
+        <div id="neutralPrimaryAlt" class="color-sample" onclick="copyToClipboard('neutralPrimaryAlt')">
+            <div class="color-sample-name">neutralPrimaryAlt</div>
+        </div>
+        <div id="neutralPrimary" class="color-sample" onclick="copyToClipboard('neutralPrimary')">
+            <div class="color-sample-name">neutralPrimary</div>
+        </div>
+        <div id="neutralDark" class="color-sample" onclick="copyToClipboard('neutralDark')">
+            <div class="color-sample-name">neutralDark</div>
+        </div>
+        <div id="black" class="color-sample" onclick="copyToClipboard('black')">
+            <div class="color-sample-name">black</div>
+        </div>
+        <div id="white" class="color-sample" onclick="copyToClipboard('white')">
+            <div class="color-sample-name">white</div>
+        </div>
+    </div>
+    <script>
+        function copyToClipboard(id) {
+            const textToCopy = "ColorValue(colors." + document.getElementById(id).getAttribute('id') + ")";
+            const dummyTextArea = document.createElement('textarea');
+            dummyTextArea.value = textToCopy;
+            document.body.appendChild(dummyTextArea);
+            dummyTextArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(dummyTextArea);
+
+        }
+    </script>
+</body>
+
+</html>
